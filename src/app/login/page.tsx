@@ -80,6 +80,40 @@ export default function LoginPage() {
         <p style={{ textAlign: 'center', marginTop: '24px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)' }}>
           Don't have an account? <Link href="/register" style={{ color: 'var(--primary)', fontWeight: '600' }}>Create one</Link>
         </p>
+
+        {/* Demo Accounts Section */}
+        <div style={{ marginTop: '32px', borderTop: '1px solid var(--glass-border)', paddingTop: '24px' }}>
+          <p style={{ fontSize: '0.85rem', fontWeight: '600', color: 'rgba(255,255,255,0.8)', marginBottom: '16px', textAlign: 'center' }}>
+            Testing Demo Accounts
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div 
+              onClick={() => { setEmail('admin@primetrade.ai'); setPassword('admin123'); }}
+              style={{ padding: '12px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--glass-border)', cursor: 'pointer', transition: 'all 0.2s' }}
+              onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.06)'}
+              onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.03)'}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: '700', color: 'var(--accent)' }}>ADMIN</span>
+                <span style={{ fontSize: '0.7rem', opacity: 0.5 }}>Click to autofill</span>
+              </div>
+              <p style={{ fontSize: '0.8rem', margin: 0 }}>admin@primetrade.ai / admin123</p>
+            </div>
+            
+            <div 
+              onClick={() => { setEmail('user@primetrade.ai'); setPassword('user123'); }}
+              style={{ padding: '12px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--glass-border)', cursor: 'pointer', transition: 'all 0.2s' }}
+              onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.06)'}
+              onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.03)'}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: '700', color: 'var(--primary)' }}>USER</span>
+                <span style={{ fontSize: '0.7rem', opacity: 0.5 }}>Click to autofill</span>
+              </div>
+              <p style={{ fontSize: '0.8rem', margin: 0 }}>user@primetrade.ai / user123</p>
+            </div>
+          </div>
+        </div>
       </div>
       <style jsx>{`
         .animate-spin {
