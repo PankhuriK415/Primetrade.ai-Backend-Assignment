@@ -55,7 +55,7 @@ input, textarea, select {
   font-family: inherit;
   background: var(--glass);
   border: 1px solid var(--glass-border);
-  color: rgba(134, 150, 251, 0.595);
+  color: rgba(100, 100, 100, 0.201);
   padding: 12px 16px;
   border-radius: 8px;
   outline: none;
