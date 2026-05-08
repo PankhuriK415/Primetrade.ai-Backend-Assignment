@@ -130,10 +130,14 @@ export default function DashboardPage() {
     }
   };
 
-  const filteredTasks = tasks.filter(task => 
-    task.title.toLowerCase().includes(search.toLowerCase()) ||
-    task.description.toLowerCase().includes(search.toLowerCase())
-  );
+  const priorityOrder = { high: 0, medium: 1, low: 2 };
+
+  const filteredTasks = tasks
+    .filter(task =>
+      task.title.toLowerCase().includes(search.toLowerCase()) ||
+      task.description.toLowerCase().includes(search.toLowerCase())
+    )
+    .sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
 
   if (authLoading || !user) {
     return (
